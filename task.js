@@ -1,10 +1,7 @@
-const n = 99;
-let fib = [0, 1, 1];
-for (let i = 3; i <= n; i++) {
-    fib[i] = fib[i - 1] + fib[i - 2];
-    if (fib[i] <= n) {
-        console.log(fib[i]);
-    } else {
-        break;
-    }
+let year = 2025;
+
+if((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0){
+    console.log(year + " is a leap year");
+} else {
+    console.log(year + " is not a leap year");
 }

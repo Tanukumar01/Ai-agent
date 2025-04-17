@@ -1,24 +1,16 @@
 # 🤖 AI-Agent: Task-Automating Code Generator
 
-This project is an interactive Node.js-based AI agent that generates, reviews, and runs code using OpenRouter's AI models (like GPT-3.5, Claude, Mixtral). It allows users to input a task and automatically generates a runnable JavaScript solution using AI.
-
-## 🚀 Features
-
-- Takes natural language task input from user
-- Uses OpenRouter API to generate code with models like GPT-3.5, Claude, Mixtral, etc.
-- Lets the user approve or reject the code before execution
-- Executes the code using Node.js and displays the output
-- Provides an iterative loop to refine or retry until the task is done
+This is a terminal-based Node.js project that acts as an AI assistant. It takes a user's natural language task, generates JavaScript code using OpenRouter AI models, and executes it — all with interactive approval and iteration.
 
 ---
 
-## 🧠 How It Works
+## 🚀 Features
 
-1. You describe the task you want to automate.
-2. The AI generates JavaScript code to perform the task.
-3. You review and approve the code.
-4. The code is executed directly in Node.js.
-5. You can give feedback or retry until you're satisfied.
+- Accepts task input from the user via terminal
+- Uses OpenRouter API (GPT-3.5, Claude, Mixtral, etc.) to generate JavaScript code
+- Shows the generated code for user approval before execution
+- Runs the code using Node.js and displays the result
+- Supports iteration based on feedback until the user is satisfied
 
 ---
 
@@ -34,11 +26,11 @@ npm install
 
 ## 🔐 Setup
 
-1. Get your free OpenRouter API key from [openrouter.ai](https://openrouter.ai)
-2. Create a `.env` file in the root of the project:
+1. Get your OpenRouter API key from [openrouter.ai](https://openrouter.ai)
+2. Create a `.env` file in the root directory and add your API key:
 
 ```env
-OPENROUTER_API_KEY=sk-your-key-here
+OPENROUTER_API_KEY=sk-your-api-key-here
 ```
 
 ---
@@ -49,60 +41,70 @@ OPENROUTER_API_KEY=sk-your-key-here
 npm start
 ```
 
-Follow the prompts in the terminal to input your task, approve generated code, and execute it.
+Follow the prompts in your terminal to enter a task, review AI-generated code, and execute it if approved.
+
+---
+
+## 📄 Example
+
+```bash
+💬 What task should the AI perform?
+> Create a function that returns the square of a number
+
+🔁 Attempt 1:
+
+📋 AI-generated code:
+
+function square(num) {
+  return num * num;
+}
+
+console.log(square(5));
+
+✅ Approve and run this code? (yes/no): 
+> yes
+
+🚀 Running task.js...
+
+✅ Output:
+25
+
+🎯 Are you satisfied with the result? (yes/no):
+> yes
+
+🎉 Task completed successfully!
+```
 
 ---
 
 ## 🛠️ Technologies Used
 
-- Node.js
-- OpenRouter API
-- Axios
-- Readline-Sync
-- Puppeteer (for future browser automation)
-- dotenv (for secure API key management)
+- Node.js  
+- OpenRouter API  
+- Axios  
+- Readline-Sync  
+- dotenv
 
 ---
 
-## ⚠️ Disclaimer
+## ⚠️ Warning
 
-This agent executes AI-generated code on your local machine. Be careful and review the code before execution. Malicious or buggy code may cause unintended behavior.
-
----
-
-## 🧪 Example
-
-```bash
-💬 What task should the AI perform?
-> Scrape the title of https://example.com
-
-📋 AI-generated code:
-const puppeteer = require('puppeteer');
-...
-
-✅ Approve and run this code? (yes/no):
-> yes
-
-✅ Output:
-Example Domain
-```
+This script runs AI-generated JavaScript code locally using `node`. Always review the code before approving it to avoid any unintended behavior.
 
 ---
 
-## 🐛 Issues / Contribute
+## 🐛 Issues & Contributions
 
-Feel free to open issues or submit PRs to improve the project.
-
-GitHub: [Tanukumar01/Ai-agent](https://github.com/Tanukumar01/Ai-agent)
+Have feedback or ideas to improve this tool?  
+Feel free to [open an issue](https://github.com/Tanukumar01/Ai-agent/issues) or submit a pull request.
 
 ---
 
 ## 📄 License
 
 This project is licensed under the ISC License.
+```
 
 ---
 
-```
-
-Let me know if you’d like a shorter version or if you’re adding more features (like support for other languages or sandboxing)—we can update it accordingly!
+Let me know if you'd like the example to be more advanced (like a file operation or API request), or if you'd like to add GIF/screenshots next!

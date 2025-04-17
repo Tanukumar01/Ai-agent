@@ -8,9 +8,19 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
+    "node-fetch": "^2.7.0",
     "puppeteer": "^24.6.1",
     "readline-sync": "^1.4.10"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tanukumar01/Ai-agent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Tanukumar01/Ai-agent/issues"
+  },
+  "homepage": "https://github.com/Tanukumar01/Ai-agent#readme",
+  "description": ""
 }

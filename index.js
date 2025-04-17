@@ -4,7 +4,7 @@ const axios = require("axios");
 const readlineSync = require("readline-sync");
 
 // Replace with your free OpenRouter API key
-const API_KEY = "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";
+const API_KEY = "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";
 const MODEL = "openai/gpt-3.5-turbo"; // Or try: "mistralai/mixtral-8x7b", "anthropic/claude-3-haiku"
 
 async function askAI(prompt) {
@@ -27,11 +27,11 @@ async function askAI(prompt) {
 async function runAgent() {
     const userTask = readlineSync.question("💬 What task should the AI perform? ");
   
-    const basePrompt = `
+    let basePrompt = `
   You're an AI assistant. Your job is to complete this task:
   "${userTask}"
   
-  You MUST respond with valid language code ONLY .
+  You MUST respond with valid language code ONLY not mention the name of lannguage .
   This will run directly using Node.js , this will result in any language, do not use tripledots and don't mentions the name languge .
   `;
   
@@ -76,11 +76,11 @@ async function runAgent() {
           isTaskDone = true;
         } else {
           const reason = readlineSync.question("🛠️ What should be improved or changed? ");
-          basePrompt += `\n\n📝 USER FEEDBACK: ${reason}\n\nUpdate the code accordingly.`;
+          basePrompt = `\n\n correct this ${code} according to user as user want to ${reason}\n\n Update the code accordingly.`;
         }
       } else {
         const reason = readlineSync.question("🛠️ What went wrong? Describe the issue: ");
-        basePrompt += `\n\n📝 ERROR: ${reason}\n\nFix the issue and try again.`;
+        basePrompt = `\n\n improve the code according to above condition ${reason}\n\n Fix the issue and try again.`;
       }
     }
   }
