@@ -4,7 +4,7 @@ const axios = require("axios");
 const readlineSync = require("readline-sync");
 
 
-const API_KEY = "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";
+const API_KEY = "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";
 const MODEL = "openai/gpt-3.5-turbo"; 
 
 async function askAI(prompt) {
