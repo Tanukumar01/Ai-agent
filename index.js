@@ -3,9 +3,9 @@ const { exec } = require("child_process");
 const axios = require("axios");
 const readlineSync = require("readline-sync");
 
-// Replace with your free OpenRouter API key
+
 const API_KEY = "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";
-const MODEL = "openai/gpt-3.5-turbo"; // Or try: "mistralai/mixtral-8x7b", "anthropic/claude-3-haiku"
+const MODEL = "openai/gpt-3.5-turbo"; 
 
 async function askAI(prompt) {
   const response = await axios.post(
