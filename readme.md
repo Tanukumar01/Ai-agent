@@ -3,7 +3,7 @@
 This is a terminal-based Node.js project that acts as an AI assistant. It takes a user's natural language task, generates JavaScript code using OpenRouter AI models, and executes it — all with interactive approval and iteration.
 
 ---
-## Live Demo -> {https://ai-task-agent-oqf0.onrender.com/}
+## Live Demo -> https://ai-task-agent-oqf0.onrender.com/
 
 ## 🚀 Features
 
